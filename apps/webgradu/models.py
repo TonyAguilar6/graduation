@@ -31,6 +31,7 @@ class paquete(models.Model):
     ubication = models.CharField(max_length=80, null=False,blank=False)
     peso = models.DecimalField(null=False, max_digits=2, decimal_places=2)
     tipo = models.TextField(null=False,blank=False)
+    image = models.URLField(max_length=800, default='https://i.postimg.cc/vTphDsSm/undraw-warning-cyit.png', blank=False, null=False)
     fk_emisor = models.ForeignKey(emisor, null=False, blank=False, on_delete=models.CASCADE)
     fk_receptor = models.ForeignKey(receptor, null=False, blank=False, on_delete=models.CASCADE)
     fk_mensajero = models.ForeignKey(mensajero, null=False, blank=False, on_delete=models.CASCADE)
